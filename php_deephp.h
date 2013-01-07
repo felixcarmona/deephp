@@ -8,3 +8,5 @@ PHP_FUNCTION(get_memory_address);
 
 extern zend_module_entry deephp_module_entry;
 #define phpext_deephp_ptr &deephp_module_entry
+
+#endif

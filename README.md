@@ -2,8 +2,8 @@ install
 =======
 phpize it and compile (phpize && chmod u+x configure && ./configure && make) and add "extension=/path/deephp.so" in your php php.ini file
 
-perform a variable pointer (now 'Z_ARRVAL_P' only supported)
-==========================
+perform a variable pointer (now only 'Z_ARRVAL_P' supported)
+============================================================
 ```php
 <?php
 

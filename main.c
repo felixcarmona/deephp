@@ -8,10 +8,7 @@
 ZEND_BEGIN_ARG_INFO_EX(func_args, 1, 0, 0)
 ZEND_END_ARG_INFO()
 
-static zend_function_entry deephp_functions[] = { // php 5.4+ zend_function_entry : else : function_entry
-#include "lib/function_entry.h"
-{NULL, NULL, NULL}
-};
+#include "lib/function_entry.c"
 
 zend_module_entry deephp_module_entry = {
 #if ZEND_MODULE_API_NO >= 20010901
@@ -34,4 +31,4 @@ STANDARD_MODULE_PROPERTIES
 ZEND_GET_MODULE(deephp)
 #endif
 
-#include "lib/deephp_functions.h"
+#include "lib/deephp_functions.c"

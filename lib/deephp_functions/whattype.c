@@ -1,11 +1,9 @@
 PHP_FUNCTION(whattype)
 {
-
     zval **arg;
     if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "Z", &arg) == FAILURE) {
         RETURN_NULL();
     }
-
     switch (Z_TYPE_PP(arg)) {
         case IS_NULL:
             RETVAL_STRING("NULL", 1);

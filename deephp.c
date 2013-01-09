@@ -8,7 +8,7 @@
 ZEND_BEGIN_ARG_INFO_EX(func_args, 1, 0, 0)
 ZEND_END_ARG_INFO()
 
-static function_entry deephp_functions[] = {
+static zend_function_entry deephp_functions[] = { // php 5.4+ zend_function_entry : else : function_entry
 PHP_FE(get_memory_address, func_args)
 {NULL, NULL, NULL}
 };

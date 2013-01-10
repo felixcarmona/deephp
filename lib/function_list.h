@@ -1,2 +1,1 @@
-PHP_FUNCTION(get_array_memory_address);
-PHP_FUNCTION(whattype);
+PHP_FUNCTION(get_memory_address);

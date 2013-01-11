@@ -31,4 +31,5 @@ STANDARD_MODULE_PROPERTIES
 ZEND_GET_MODULE(deephp)
 #endif
 
+#include "lib/shared.c"
 #include "lib/deephp_functions.c"

@@ -14,4 +14,6 @@ $c = &$b;
 var_dump(get_memory_address($a)); // string(14) "0x7fc7f7559ff8"
 var_dump(get_memory_address($b)); // string(14) "0x7fc7f7559ae0"
 var_dump(get_memory_address($c)); // string(14) "0x7fc7f7559ae0"
+var_dump(is_referencing($a, $b)); // bool(false)
+var_dump(is_referencing($b, $c)); // bool(true)
 ```

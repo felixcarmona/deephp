@@ -2,13 +2,14 @@
 #include "config.h"
 #endif
 
+#include <string>
 #include "php.h"
 #include "php_deephp.h"
 
 ZEND_BEGIN_ARG_INFO_EX(func_args, 1, 0, 0)
 ZEND_END_ARG_INFO()
 
-#include "lib/function_entry.c"
+#include "lib/function_entry.cpp"
 
 zend_module_entry deephp_module_entry = {
 #if ZEND_MODULE_API_NO >= 20010901
@@ -31,5 +32,5 @@ STANDARD_MODULE_PROPERTIES
 ZEND_GET_MODULE(deephp)
 #endif
 
-#include "lib/shared.c"
-#include "lib/deephp_functions.c"
+#include "lib/shared.cpp"
+#include "lib/deephp_functions.cpp"

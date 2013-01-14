@@ -1,4 +1,4 @@
-void get_memory_address(zval* arg, char* out)
+std::string get_memory_address(zval* arg)
 {
     char r[100];
     switch (arg->type) {
@@ -20,9 +20,5 @@ void get_memory_address(zval* arg, char* out)
             sprintf(r, "%p", (void *)arg);
             break;
     }
-    int i;
-    for(i = 0; i <= 100; i++)
-    {
-        out[i] = r[i];
-    }
+    return r; // returned as std::string
 }

@@ -1,4 +1,4 @@
-PHP_FUNCTION(is_referencing)
+PHP_FUNCTION(are_referenced)
 {
     zval *arg1, *arg2;
 

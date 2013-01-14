@@ -2,6 +2,7 @@
 #include "config.h"
 #endif
 
+#include <sstream>
 #include <string>
 #include "php.h"
 #include "php_deephp.h"

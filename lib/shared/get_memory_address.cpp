@@ -20,5 +20,7 @@ std::string get_memory_address(zval* arg)
             sprintf(r, "%p", (void *)arg);
             break;
     }
-    return r; // returned as std::string
+
+    std::string out = r;
+    return out;
 }

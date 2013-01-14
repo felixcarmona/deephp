@@ -2,6 +2,7 @@
 #include "config.h"
 #endif
 
+#include <stdint.h>
 #include <sstream>
 #include <string>
 #include "php.h"

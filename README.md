@@ -15,13 +15,27 @@ var_dump(get_memory_address($b)); // string(14) "0x7fc7f7559ae0"
 var_dump(get_memory_address($c)); // string(14) "0x7fc7f7559ae0"
 ```
 
-getting the memory data of a memory address
+reading the data of a memory address
 -------
 ```php
 $a = 'hello';
 $b = get_memory_address($a); // $b = "0x7fc7f7559ff8"
 
 var_dump(get_memory_data($b)); // string(5) "hello"
+```
+
+writing data in a memory address
+-------
+```php
+$a = 'hello';
+$b = get_memory_address($a); // $b = "0x7fc7f7559ff8"
+$c = 'mynewcontent';
+
+set_memory_data($b, $c);
+var_dump($a); // string(5) "mynew" -> the PHP engine thinks $a lengths remain 5 ('hello') but the real length must be 12 ('mynewcontent')
+var_dump(get_memory_data($b)); // string(12) "mynewcontent
+"
+
 ```
 
 check if two variables are in referencing

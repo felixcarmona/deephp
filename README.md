@@ -32,9 +32,8 @@ $b = get_memory_address($a); // $b = "0x7fc7f7559ff8"
 $c = 'mynewcontent';
 
 set_memory_data($b, $c);
-var_dump($a); // string(5) "mynew" -> the PHP engine thinks $a lengths remain 5 ('hello') but the real length must be 12 ('mynewcontent')
-var_dump(get_memory_data($b)); // string(12) "mynewcontent
-"
+var_dump($a); // string(5) "mynew" -> because the PHP engine remain thinking $a lengths is 5 ('hello') but the real length must be 12 ('mynewcontent')
+var_dump(get_memory_data($b)); // string(12) "mynewcontent"
 
 ```
 
